@@ -1,17 +1,12 @@
 {% extends 'base.html' %}
-<br>
-<br>
-<br>
-<br>
-<br>
 {% block content %}
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-    <h1>This is just wow</h1>
+ 	{% load crispy_form_tags %}
+   <div>
+	   <form method="post">
+			{% csrf_token %}
+			{{ form }}
+	   </form>
+   </div>
 
 {% endblock %}
