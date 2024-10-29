@@ -9,7 +9,7 @@ class bookModel(models.Model):
         ('Flying', 'Flying'),
         ('Horror', 'Horror'),
     )
-    id = models.integerField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     book_name = models.CharField(max_length=30)
     author = models.CharField(max_length=30)
     category = models.CharField(max_length=30, choices=type)

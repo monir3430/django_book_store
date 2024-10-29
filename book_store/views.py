@@ -8,5 +8,6 @@ def home(request):
 
 
 def store(request):
-    book = bookForm()
+    book = bookForm(request.POST)
+    print(book)
     return render(request, 'store.html', {'form': book})
