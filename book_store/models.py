@@ -14,6 +14,6 @@ class bookModel(models.Model):
     author = models.CharField(max_length=30)
     category = models.CharField(max_length=30, choices=type)
     first_publish = models.DateTimeField(auto_now_add=True)
-    last_publish = models.DateTimeField(auto_now_add=True)
+    last_publish = models.DateTimeField(auto_now=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 

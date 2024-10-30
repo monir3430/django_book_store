@@ -1,17 +1,35 @@
 {% extends 'base.html' %}
-<br>
-<br>
-<br>
-<br>
-<br>
+
 {% block content %}
 
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="w-75 mx-auto">
 
-    <h1>This is just wow</h1>
+<table class="table table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Price</th>
+      <th scope="col">First Publish</th>
+      <th scope="col">Last Publish</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for item in data %}
+		<tr>
+      <th >{{ item.id }}</th>
+			<td>{{item.book_name}}</td>
+			<td>{{ item.author }}</td>
+			<td>{{ item.price }}</td>
+			<td>{{ item.first_publish }}</td>
+			<td>{{ item.last_publish }}</td>
+		</tr>
+    <tr>
+	{% endfor %}
+  </tbody>
+</table>
+</div>
+
 
 {% endblock %}

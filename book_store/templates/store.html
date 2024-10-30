@@ -5,7 +5,7 @@
 
    <div class="w-50 mx-auto bg-danger-subtle">
 <h2>Welcome to Book store management</h2>
-	   <form method="post">
+	   <form method="post" >
 			{% csrf_token %}
 		    {{form|crispy }}
 		   <input type="submit" class="btn btn-primary">
