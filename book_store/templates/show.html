@@ -3,7 +3,8 @@
 {% block content %}
 
 <div class="w-75 mx-auto">
-
+	<h1>List of Books</h1>
+	{% if data %}
 <table class="table table table-hover">
   <thead>
     <tr>
@@ -13,6 +14,7 @@
       <th scope="col">Price</th>
       <th scope="col">First Publish</th>
       <th scope="col">Last Publish</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -24,12 +26,18 @@
 			<td>{{ item.price }}</td>
 			<td>{{ item.first_publish }}</td>
 			<td>{{ item.last_publish }}</td>
+			<td>
+				<a href="{% url 'edit_book' id=item.id %}" class="btn btn-warning btn-sm">Edit</a>
+				<a href="{% url 'delete_book' id=item.id %}" class="btn btn-danger btn-sm">Delete</a>
+			</td>
 		</tr>
     <tr>
 	{% endfor %}
   </tbody>
 </table>
+{% else %}
+ <h2>No Data</h2>
 </div>
-
+{% endif %}
 
 {% endblock %}
