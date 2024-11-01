@@ -3,8 +3,8 @@
 
  	{% load crispy_forms_tags %}
 
-   <div class="w-50 mx-auto bg-danger-subtle">
-<h2>Welcome to Book store management</h2>
+   <div class="w-50 mx-auto">
+	   <h2>Welcome to Book store management</h2>
 	   <form method="post" >
 			{% csrf_token %}
 		    {{form|crispy }}
