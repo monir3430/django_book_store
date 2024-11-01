@@ -1,5 +1,5 @@
 from django.contrib import admin
-from book_store.models import bookModel, author, reader, people, man, women
+from book_store.models import bookModel, author, reader, people, man, women, friend, me
 
 
 # Register your models here.
@@ -31,3 +31,13 @@ class ManAdmin(admin.ModelAdmin):
 class WomenAdmin(admin.ModelAdmin):
     list_display = ('name', 'age', 'married', 'unmarried')  # Include inherited and unique fields
     list_filter = ('married', 'unmarried')  # Add filters for 'married' and 'unmarried'
+
+
+@admin.register(friend)
+class friendAdmin(admin.ModelAdmin):
+    list_display = ('school', 'group', 'attendance')
+
+
+@admin.register(me)
+class MeAdmin(admin.ModelAdmin):
+    list_display = ('school', 'group', 'attendance')

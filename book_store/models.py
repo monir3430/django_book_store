@@ -51,3 +51,14 @@ class man(people):
 class women(people):
     married = models.BooleanField()
     unmarried = models.BooleanField()
+
+
+class friend(models.Model):
+    school = models.CharField(max_length=30)
+    group = models.CharField(max_length=30)
+    attendance = models.BooleanField()
+
+
+class me(friend):
+    class Meta:
+        proxy = True
